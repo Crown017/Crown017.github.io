@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          GC1 - crown-site
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite-url/2020/01/16/GC1/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('null')
+            /*post*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/BeanTechSign-white.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                        </div>
+                        <h1>GC1</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by John Doe on
+                            2020-01-16
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Your Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h2><span id="触发gc的条件">触发GC的条件</span></h2>
+<p>触发MinorGC 的条件:<br>
+<strong>Eden区满了</strong></p>
+<p>触发Full GC的条件:</p>
+<figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Full GC触发条件：</span><br><span class="line"></span><br><span class="line">（<span class="number">1</span>）调用System.gc时，系统建议执行Full GC，但是不必然执行</span><br><span class="line"></span><br><span class="line">（<span class="number">2</span>）老年代空间不足</span><br><span class="line"></span><br><span class="line">（<span class="number">3</span>）方法去空间不足</span><br><span class="line"></span><br><span class="line">（<span class="number">4</span>）通过Minor GC后进入老年代的平均大小大于老年代的可用内存</span><br><span class="line"></span><br><span class="line">（<span class="number">5</span>）由Eden区、From <span class="built_in">Space</span>区向<span class="keyword">To</span> <span class="built_in">Space</span>区复制时，对象大小大于<span class="keyword">To</span> <span class="built_in">Space</span>可用内存，则把该对象转存到老年代，且老年代的可用内存小于该对象大小,Eden <span class="keyword">or</span> Survivor ----&gt; <span class="keyword">To</span> Survivor  如果不够则通过内存担保措施直接晋升到老年代。</span><br></pre></td></tr></table></figure>
+<h3><span id="第一个例子">第一个例子</span></h3>
+<p>命令行参数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-Xms20m</span><br><span class="line">-Xmx20m</span><br><span class="line">-Xmn10m</span><br><span class="line">-verbose:gc</span><br><span class="line">-XX:+PrintGCDetails</span><br><span class="line">-XX:SurvivorRatio=<span class="number">8</span></span><br></pre></td></tr></table></figure>
+<p>先介绍一下每个参数的含义</p>
+<ul>
+<li>Xms初始化堆内存、</li>
+<li>Xmx 最大堆内存、</li>
+<li>Xmn 是新生代的大小、</li>
+<li>verbose:gc  GC 日志中输出详细的GC信息 、</li>
+<li>-XX:+PrintGcDetails打印 GC 细节与发生时间、</li>
+<li>-XX:SurvivorRatio=8 Eden 区域跟Survivor区域的大小比值 Eden:Survivor 8:1 = 8  Eden:From Survivor: To Survivor</li>
+</ul>
+<p>测试代码</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyGcTest02</span> &#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">String</span>[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> <span class="built_in">size</span>  = <span class="number">1024</span> * <span class="number">1024</span>; <span class="comment">//1m 大小</span></span><br><span class="line">        <span class="keyword">byte</span>[] byteArray1 =<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">2</span>*<span class="built_in">size</span>];</span><br><span class="line">        <span class="keyword">byte</span>[] byteArray2 =<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">2</span>*<span class="built_in">size</span>];</span><br><span class="line">        <span class="keyword">byte</span>[] byteArray3 =<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">2</span>*<span class="built_in">size</span>];</span><br><span class="line">        <span class="keyword">byte</span>[] byteArray4 =<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">2</span>*<span class="built_in">size</span>];</span><br><span class="line"></span><br><span class="line">        System.out.<span class="built_in">println</span>(<span class="string">"hello world"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>打印日志如下:</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[GC (Allocation Failure) [PSYoungGen: 8141K-&gt;776K(9216K)] 8141K-&gt;6928K(19456K), <span class="number">0.0038074</span> secs] [<span class="built_in">Times</span>: user=<span class="number">0.00</span> sys=<span class="number">0.00</span>, real=<span class="number">0.00</span> secs] </span><br><span class="line">[Full GC (Ergonomics) [PSYoungGen: 776K-&gt;0K(9216K)] [ParOldGen: 6152K-&gt;6768K(10240K)] 6928K-&gt;6768K(19456K), [Metaspace: 3130K-&gt;3130K(1056768K)], <span class="number">0.0053604</span> secs] [<span class="built_in">Times</span>: user=<span class="number">0.00</span> sys=<span class="number">0.00</span>, real=<span class="number">0.01</span> secs] </span><br><span class="line">hello world</span><br><span class="line">Heap</span><br><span class="line"> PSYoungGen      total 9216K, used 2371K [<span class="number">0x00000000ff600000</span>, <span class="number">0x0000000100000000</span>, <span class="number">0x0000000100000000</span>)</span><br><span class="line">  eden space 8192K, <span class="number">28</span>% used [<span class="number">0x00000000ff600000</span>,<span class="number">0x00000000ff850c58</span>,<span class="number">0x00000000ffe00000</span>)</span><br><span class="line">  from space 1024K, <span class="number">0</span>% used [<span class="number">0x00000000ffe00000</span>,<span class="number">0x00000000ffe00000</span>,<span class="number">0x00000000fff00000</span>)</span><br><span class="line">  to   space 1024K, <span class="number">0</span>% used [<span class="number">0x00000000fff00000</span>,<span class="number">0x00000000fff00000</span>,<span class="number">0x0000000100000000</span>)</span><br><span class="line"> ParOldGen       total 10240K, used 6768K [<span class="number">0x00000000fec00000</span>, <span class="number">0x00000000ff600000</span>, <span class="number">0x00000000ff600000</span>)</span><br><span class="line">  object space 10240K, <span class="number">66</span>% used [<span class="number">0x00000000fec00000</span>,<span class="number">0x00000000ff29c398</span>,<span class="number">0x00000000ff600000</span>)</span><br><span class="line"> Metaspace       used 3170K, capacity 4496K, committed 4864K, reserved 1056768K</span><br><span class="line">  class space    used 344K, capacity 388K, committed 512K, reserved 1048576K</span><br></pre></td></tr></table></figure>
+<p>上面是GC的打印日志 分为两部分来分析他们:</p>
+<h5><span id="gc-日志">GC 日志</span></h5>
+<p>一条Minor GC</p>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">8141</span>K-&gt;776K(<span class="name">9216K</span>)] <span class="number">8141</span>K-&gt;6928K(<span class="name">19456K</span>), <span class="number">0.0038074</span> secs] [<span class="name">Times:</span> user=0.00 sys=0.00, real=0.00 secs]</span><br></pre></td></tr></table></figure>
+<p>一条Full GC</p>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="name">Full</span> GC (<span class="name">Ergonomics</span>) [<span class="name">PSYoungGen:</span> <span class="number">776</span>K-&gt;0K(<span class="name">9216K</span>)] [<span class="name">ParOldGen:</span> <span class="number">6152</span>K-&gt;6768K(<span class="name">10240K</span>)] <span class="number">6928</span>K-&gt;6768K(<span class="name">19456K</span>), [<span class="name">Metaspace:</span> <span class="number">3130</span>K-&gt;3130K(<span class="name">1056768K</span>)], <span class="number">0.0053604</span> secs] [<span class="name">Times:</span> user=0.00 sys=0.00, real=0.01 secs]</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>开头的部分有两种: GC 表示是Minor GC 、另外一种是Full GC. GC (Allocation Failure) 是内存分配失败的导致一次Minor GC，Eden 区满了。然后Full GC 是由于上面的第五条。</p>
+</li>
+<li>
+<p>GC 收集的内存变化</p>
+</li>
+</ol>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="name">PSYoungGen:</span> <span class="number">8141</span>K-&gt;808K(<span class="name">9216K</span>)]</span><br></pre></td></tr></table></figure>
+<p>PSYoungGen : PS 表示Parallel Scavenge收集器 复制算法的收集器 内存大小的变化 7340K 内存发生了变化 其中部分被垃圾回收器清除了，部分复制到了To Survivor 区域</p>
+<ol start="3">
+<li>0.0045558 secs  垃圾回收时所用的事件</li>
+</ol>
+<h5><span id="新生代">新生代</span></h5>
+ <figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PSYoungGen      total <span class="number">9216</span>K, used <span class="number">7364</span>K [<span class="number">0x00000000ff600000</span>, <span class="number">0x0000000100000000</span>, <span class="number">0x0000000100000000</span>)</span><br></pre></td></tr></table></figure>
+<p>9216K / 1024 = 9m 我们设置了新生代的内存大小为10M ，Eden 跟 Survivor 空间的比值 8:1 但是有两个Surivor 所有只有一个Servivor 是可以用的。 所以就是9m</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eden <span class="literal">space</span> <span class="number">8192</span>K </span><br><span class="line"><span class="keyword">from</span> <span class="literal">space</span> <span class="number">1024</span>K</span><br><span class="line"><span class="keyword">to</span>   <span class="literal">space</span> <span class="number">1024</span>K</span><br></pre></td></tr></table></figure>
+<p>eden 8m from 1m to 1m  但是to的used为0%。</p>
+<h5><span id="当新生代已经无法容纳下一个新创建的对象新创建的对象将直接在老年代创建">当新生代已经无法容纳下一个新创建的对象,新创建的对象将直接在老年代创建</span></h5>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyGcTest02</span> &#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">String</span>[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> <span class="built_in">size</span>  = <span class="number">1024</span> * <span class="number">1024</span>; <span class="comment">//1m 大小</span></span><br><span class="line">        <span class="keyword">byte</span>[] byteArray1 =<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">2</span>*<span class="built_in">size</span>];</span><br><span class="line">        <span class="keyword">byte</span>[] byteArray2 =<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">2</span>*<span class="built_in">size</span>];</span><br><span class="line">        <span class="keyword">byte</span>[] byteArray4 =<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">3</span>*<span class="built_in">size</span>];</span><br><span class="line">        <span class="keyword">byte</span>[] byteArray7 =<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">3</span>*<span class="built_in">size</span>];</span><br><span class="line"></span><br><span class="line">        System.out.<span class="built_in">println</span>(<span class="string">"hello world"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码在非Dubug模式下并不会造成full gc</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[GC (Allocation Failure) [PSYoungGen: 6093K-&gt;776K(9216K)] 6093K-&gt;4880K(19456K), <span class="number">0.0026164</span> secs] [<span class="built_in">Times</span>: user=<span class="number">0.09</span> sys=<span class="number">0.02</span>, real=<span class="number">0.00</span> secs] </span><br><span class="line">hello world</span><br><span class="line">Heap</span><br><span class="line"> PSYoungGen      total 9216K, used 7241K [<span class="number">0x00000000ff600000</span>, <span class="number">0x0000000100000000</span>, <span class="number">0x0000000100000000</span>)</span><br><span class="line">  eden space 8192K, <span class="number">78</span>% used [<span class="number">0x00000000ff600000</span>,<span class="number">0x00000000ffc50598</span>,<span class="number">0x00000000ffe00000</span>)</span><br><span class="line">  from space 1024K, <span class="number">75</span>% used [<span class="number">0x00000000ffe00000</span>,<span class="number">0x00000000ffec2020</span>,<span class="number">0x00000000fff00000</span>)</span><br><span class="line">  to   space 1024K, <span class="number">0</span>% used [<span class="number">0x00000000fff00000</span>,<span class="number">0x00000000fff00000</span>,<span class="number">0x0000000100000000</span>)</span><br><span class="line"> ParOldGen       total 10240K, used 4104K [<span class="number">0x00000000fec00000</span>, <span class="number">0x00000000ff600000</span>, <span class="number">0x00000000ff600000</span>)</span><br><span class="line">  object space 10240K, <span class="number">40</span>% used [<span class="number">0x00000000fec00000</span>,<span class="number">0x00000000ff002020</span>,<span class="number">0x00000000ff600000</span>)</span><br><span class="line"> Metaspace       used 3170K, capacity 4496K, committed 4864K, reserved 1056768K</span><br><span class="line">  class space    used 344K, capacity 388K, committed 512K, reserved 1048576K</span><br></pre></td></tr></table></figure>
+<p>这里的应该是前两个分配完了,第三个字节数据的时候申请内存触发了Minor GC,结束新生代大小592K,前面创建的4m &gt; To Survivor.  则直接晋身到老年代了(4104k) 有空间存放第一个3M存放后小于一半,第四个字节数组也不会触发GC ,第四个的创建也是新生代。</p>
+<h3><span id="systemgc">System.gc();</span></h3>
+<p>System.gc();方法会让JVM执行一次垃圾回收,它会触发以西Full Gc</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.gc()<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>启动参数如下:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-verbose</span><span class="selector-pseudo">:gc</span></span><br><span class="line"><span class="selector-tag">-XX</span><span class="selector-pseudo">:+PrintGCDetails</span></span><br></pre></td></tr></table></figure>
+<p>Gc 日志如下:</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[GC (System.gc()) [PSYoungGen: <span class="number">3340</span>K-&gt;<span class="number">744</span>K(<span class="number">38400</span>K)] <span class="number">3340</span>K-&gt;<span class="number">752</span>K(<span class="number">125952</span>K), <span class="number">0.0008654</span> secs] [Times: user=<span class="number">0</span>.<span class="number">00</span> sys=<span class="number">0</span>.<span class="number">00</span>, real=<span class="number">0</span>.<span class="number">00</span> secs] </span><br><span class="line">[Full GC (System.gc()) [PSYoungGen: <span class="number">744</span>K-&gt;<span class="number">0</span>K(<span class="number">38400</span>K)] [ParOldGen: <span class="number">8</span>K-&gt;<span class="number">595</span>K(<span class="number">87552</span>K)] <span class="number">752</span>K-&gt;<span class="number">595</span>K(<span class="number">125952</span>K), [Metaspace: <span class="number">3029</span>K-&gt;<span class="number">3029</span>K(<span class="number">1056768</span>K)], <span class="number">0.0046903</span> secs] [Times: user=<span class="number">0</span>.<span class="number">00</span> sys=<span class="number">0</span>.<span class="number">00</span>, real=<span class="number">0</span>.<span class="number">01</span> secs] </span><br><span class="line">Heap</span><br><span class="line"> PSYoungGen      total <span class="number">38400</span>K, used <span class="number">998</span>K [<span class="number">0</span>x000000<span class="number">00d5d00000</span>, <span class="number">0</span>x000000<span class="number">00d8780000</span>, <span class="number">0</span>x0000<span class="number">000100000000</span>)</span><br><span class="line">  eden space <span class="number">33280</span>K, <span class="number">3</span>% used [<span class="number">0</span>x000000<span class="number">00d5d00000</span>,<span class="number">0</span>x00000000d5df9b20,<span class="number">0</span>x000000<span class="number">00d7d80000</span>)</span><br><span class="line">  from space <span class="number">5120</span>K, <span class="number">0</span>% used [<span class="number">0</span>x000000<span class="number">00d7d80000</span>,<span class="number">0</span>x000000<span class="number">00d7d80000</span>,<span class="number">0</span>x000000<span class="number">00d8280000</span>)</span><br><span class="line">  to   space <span class="number">5120</span>K, <span class="number">0</span>% used [<span class="number">0</span>x000000<span class="number">00d8280000</span>,<span class="number">0</span>x000000<span class="number">00d8280000</span>,<span class="number">0</span>x000000<span class="number">00d8780000</span>)</span><br><span class="line"> ParOldGen       total <span class="number">87552</span>K, used <span class="number">595</span>K [<span class="number">0</span>x00000<span class="number">00081600000</span>, <span class="number">0</span>x00000<span class="number">00086b80000</span>, <span class="number">0</span>x000000<span class="number">00d5d00000</span>)</span><br><span class="line">  object space <span class="number">87552</span>K, <span class="number">0</span>% used [<span class="number">0</span>x00000<span class="number">00081600000</span>,<span class="number">0</span>x00000<span class="number">00081694f68</span>,<span class="number">0</span>x00000<span class="number">00086b80000</span>)</span><br><span class="line"> Metaspace       used <span class="number">3043</span>K, capacity <span class="number">4496</span>K, committed <span class="number">4864</span>K, reserved <span class="number">1056768</span>K</span><br><span class="line">  class space    used <span class="number">330</span>K, capacity <span class="number">388</span>K, committed <span class="number">512</span>K, reserved <span class="number">1048576</span>K</span><br></pre></td></tr></table></figure>
+<h4><span id="元空间导致的full-gc">元空间导致的Full GC</span></h4>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">MyTest4</span> &#123;</span></span><br><span class="line"></span><br><span class="line">    public static <span class="literal">void</span> main(String[] args) &#123;</span><br><span class="line">        <span class="keyword">for</span> (;;)&#123;</span><br><span class="line">            Enhancer enhancer = <span class="keyword">new</span> Enhancer();</span><br><span class="line"></span><br><span class="line">            enhancer.setSuperclass(MyTest4<span class="class">.<span class="keyword">class</span>);</span></span><br><span class="line">            enhancer.setUseCache(<span class="literal">false</span>);</span><br><span class="line">            enhancer.setCallback<span class="function"><span class="params">((MethodInterceptor)(var1, var2, args1, proxy) -&gt;</span></span></span><br><span class="line"><span class="function"><span class="params">                    proxy.invokeSuper(var1,args1)</span></span></span><br><span class="line"><span class="function"><span class="params">            )</span>;</span></span><br><span class="line"><span class="function">            <span class="title">try</span> &#123;</span></span><br><span class="line"><span class="function">//                <span class="title">Thread</span>.<span class="title">sleep</span><span class="params">(<span class="number">50</span>)</span>;</span></span><br><span class="line"><span class="function">            &#125;<span class="title">catch</span> <span class="params">(Exception e)</span>&#123;</span></span><br><span class="line"><span class="function">                <span class="title">e</span>.<span class="title">printStackTrace</span><span class="params">()</span>;</span></span><br><span class="line"><span class="function">            &#125;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">            <span class="title">Object</span> <span class="title">o</span> = <span class="title">enhancer</span>.<span class="title">create</span><span class="params">()</span>;</span></span><br><span class="line"><span class="function">        &#125;</span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>GC 参数： -XX:MetaspaceSize=20m 元空间大小为20m</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-verbose:gc</span></span><br><span class="line"><span class="deletion">-XX:+PrintGCDetails</span></span><br><span class="line"><span class="deletion">-XX:MetaspaceSize=20m</span></span><br></pre></td></tr></table></figure>
+<p>Gc log</p>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">33280</span>K-&gt;2349K(<span class="name">38400K</span>)] <span class="number">33280</span>K-&gt;2357K(<span class="name">125952K</span>), <span class="number">0.0030541</span> secs] [<span class="name">Times:</span> user=0.00 sys=0.00, real=0.00 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">35629</span>K-&gt;2280K(<span class="name">38400K</span>)] <span class="number">35637</span>K-&gt;2296K(<span class="name">125952K</span>), <span class="number">0.0031842</span> secs] [<span class="name">Times:</span> user=0.00 sys=0.00, real=0.00 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">35560</span>K-&gt;2776K(<span class="name">38400K</span>)] <span class="number">35576</span>K-&gt;2800K(<span class="name">125952K</span>), <span class="number">0.0029843</span> secs] [<span class="name">Times:</span> user=0.00 sys=0.00, real=0.00 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">36056</span>K-&gt;3288K(<span class="name">71680K</span>)] <span class="number">36080</span>K-&gt;3320K(<span class="name">159232K</span>), <span class="number">0.0030766</span> secs] [<span class="name">Times:</span> user=0.01 sys=0.00, real=0.00 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">69848</span>K-&gt;4792K(<span class="name">71680K</span>)] <span class="number">69880</span>K-&gt;4832K(<span class="name">159232K</span>), <span class="number">0.0051226</span> secs] [<span class="name">Times:</span> user=0.00 sys=0.00, real=0.00 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">71352</span>K-&gt;5112K(<span class="name">137216K</span>)] <span class="number">71392</span>K-&gt;5808K(<span class="name">224768K</span>), <span class="number">0.0061339</span> secs] [<span class="name">Times:</span> user=0.00 sys=0.00, real=0.01 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">137208</span>K-&gt;5504K(<span class="name">138240K</span>)] <span class="number">137904</span>K-&gt;7800K(<span class="name">225792K</span>), <span class="number">0.0059711</span> secs] [<span class="name">Times:</span> user=0.00 sys=0.00, real=0.01 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Metadata</span> GC Threshold) [<span class="name">PSYoungGen:</span> <span class="number">128788</span>K-&gt;5936K(<span class="name">269824K</span>)] <span class="number">131084</span>K-&gt;9248K(<span class="name">357376K</span>), <span class="number">0.0044505</span> secs] [<span class="name">Times:</span> user=0.00 sys=0.00, real=0.00 secs] </span><br><span class="line">[<span class="name">Full</span> GC (<span class="name">Metadata</span> GC Threshold) [<span class="name">PSYoungGen:</span> <span class="number">5936</span>K-&gt;0K(<span class="name">269824K</span>)] [<span class="name">ParOldGen:</span> <span class="number">3312</span>K-&gt;8917K(<span class="name">62464K</span>)] <span class="number">9248</span>K-&gt;8917K(<span class="name">332288K</span>), [<span class="name">Metaspace:</span> <span class="number">20223</span>K-&gt;20223K(<span class="name">1069056K</span>)], <span class="number">0.0474020</span> secs] [<span class="name">Times:</span> user=0.27 sys=0.00, real=0.05 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">263168</span>K-&gt;2752K(<span class="name">270848K</span>)] <span class="number">272085</span>K-&gt;11669K(<span class="name">333312K</span>), <span class="number">0.0026946</span> secs] [<span class="name">Times:</span> user=0.09 sys=0.03, real=0.00 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">265920</span>K-&gt;4916K(<span class="name">325632K</span>)] <span class="number">274837</span>K-&gt;13833K(<span class="name">388096K</span>), <span class="number">0.0034723</span> secs] [<span class="name">Times:</span> user=0.13 sys=0.00, real=0.00 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">325428</span>K-&gt;7136K(<span class="name">329728K</span>)] <span class="number">334345</span>K-&gt;16085K(<span class="name">392192K</span>), <span class="number">0.0054073</span> secs] [<span class="name">Times:</span> user=0.09 sys=0.03, real=0.00 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Metadata</span> GC Threshold) [<span class="name">PSYoungGen:</span> <span class="number">58573</span>K-&gt;7488K(<span class="name">396288K</span>)] <span class="number">67522</span>K-&gt;16437K(<span class="name">458752K</span>), <span class="number">0.0060224</span> secs] [<span class="name">Times:</span> user=0.08 sys=0.03, real=0.01 secs] </span><br><span class="line">[<span class="name">Full</span> GC (<span class="name">Metadata</span> GC Threshold) [<span class="name">PSYoungGen:</span> <span class="number">7488</span>K-&gt;0K(<span class="name">396288K</span>)] [<span class="name">ParOldGen:</span> <span class="number">8949</span>K-&gt;16259K(<span class="name">91136K</span>)] <span class="number">16437</span>K-&gt;16259K(<span class="name">487424K</span>), [<span class="name">Metaspace:</span> <span class="number">33916</span>K-&gt;33916K(<span class="name">1081344K</span>)], <span class="number">0.0341647</span> secs] [<span class="name">Times:</span> user=0.16 sys=0.00, real=0.03 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">388096</span>K-&gt;2592K(<span class="name">397312K</span>)] <span class="number">404355</span>K-&gt;18851K(<span class="name">488448K</span>), <span class="number">0.0027530</span> secs] [<span class="name">Times:</span> user=0.00 sys=0.00, real=0.00 secs] </span><br><span class="line">[<span class="name">GC</span> (<span class="name">Allocation</span> Failure) [<span class="name">PSYoungGen:</span> <span class="number">390688</span>K-&gt;4672K(<span class="name">504832K</span>)] <span class="number">406947</span>K-&gt;20931K(<span class="name">595968K</span>), <span class="number">0.0035094</span> secs] [<span class="name">Times:</span> user=0.00 sys=0.00, real=0.00 secs]</span><br></pre></td></tr></table></figure>
+<h3><span id="jdk18-默认的垃圾回收算法">JDK1.8 默认的垃圾回收算法</span></h3>
+<p>使用 <strong>-XX:+PrintCommandLineFlags</strong> 会打印JVM 的命令行启动参数</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-XX:<span class="attribute">InitialHeapSize</span>=132730432 -XX:<span class="attribute">MaxHeapSize</span>=2123686912 -XX:+PrintCommandLineFlags -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:-UseLargePagesIndividualAllocation -XX:+UseParallelGC </span><br><span class="line"></span><br><span class="line">C:\Users\86188&gt;java -version</span><br><span class="line">java version <span class="string">"1.8.0_212"</span></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_212-b10)</span><br><span class="line">Java HotSpot(TM) 64-Bit<span class="built_in"> Server </span>VM (build 25.212-b10, mixed mode)</span><br></pre></td></tr></table></figure>
+<p>在JDK1.8.0.212 使用的是ParallelGC 、新生代是Parallel Scavenge 老年代是Parallel Old</p>
+<h3><span id="jvm设置阈值-pretenuresizethreshold">JVM设置阈值 PretenureSizeThreshold</span></h3>
+<p><strong>注意:</strong><br>
+只有当使用的垃圾回收器是SerialGC的时候本参数才有效。下面我们设置PretenureSizeThreshold=4194304 (1024* 1024*4 = 4m) 当对象大于4M直接分配到老年代。</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-verbose:gc</span></span><br><span class="line"><span class="deletion">-Xmx20m</span></span><br><span class="line"><span class="deletion">-Xms20m</span></span><br><span class="line"><span class="deletion">-Xmn10m</span></span><br><span class="line"><span class="deletion">-XX:+PrintGCDetails</span></span><br><span class="line"><span class="deletion">-XX:SurvivorRatio=8</span></span><br><span class="line"><span class="deletion">-XX:PretenureSizeThreshold=4194304</span></span><br><span class="line"><span class="deletion">-XX:+UseSerialGC</span></span><br></pre></td></tr></table></figure>
+<p>java代码如下我们直接生成一个5M的对象:</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyGcTest03</span> &#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">String</span>[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> <span class="built_in">size</span>  = <span class="number">1024</span> * <span class="number">1024</span>; <span class="comment">//1m 大小</span></span><br><span class="line">        <span class="keyword">byte</span>[] byteArray1 =<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">5</span>*<span class="built_in">size</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>GC 的日志如下:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Heap</span></span><br><span class="line"> <span class="string">def</span> <span class="string">new</span> <span class="string">generation</span>   <span class="string">total</span> <span class="string">9216K,</span> <span class="string">used</span> <span class="string">2161K</span> <span class="string">[0x00000000fec00000,</span> <span class="number">0x00000000ff600000</span><span class="string">,</span> <span class="number">0x00000000ff600000</span><span class="string">)</span></span><br><span class="line">  <span class="string">eden</span> <span class="string">space</span> <span class="string">8192K,</span>  <span class="number">26</span><span class="string">%</span> <span class="string">used</span> <span class="string">[0x00000000fec00000,</span> <span class="number">0x00000000fee1c590</span><span class="string">,</span> <span class="number">0x00000000ff400000</span><span class="string">)</span></span><br><span class="line">  <span class="string">from</span> <span class="string">space</span> <span class="string">1024K,</span>   <span class="number">0</span><span class="string">%</span> <span class="string">used</span> <span class="string">[0x00000000ff400000,</span> <span class="number">0x00000000ff400000</span><span class="string">,</span> <span class="number">0x00000000ff500000</span><span class="string">)</span></span><br><span class="line">  <span class="string">to</span>   <span class="string">space</span> <span class="string">1024K,</span>   <span class="number">0</span><span class="string">%</span> <span class="string">used</span> <span class="string">[0x00000000ff500000,</span> <span class="number">0x00000000ff500000</span><span class="string">,</span> <span class="number">0x00000000ff600000</span><span class="string">)</span></span><br><span class="line"> <span class="string">tenured</span> <span class="string">generation</span>   <span class="string">total</span> <span class="string">10240K,</span> <span class="string">used</span> <span class="string">5120K</span> <span class="string">[0x00000000ff600000,</span> <span class="number">0x0000000100000000</span><span class="string">,</span> <span class="number">0x0000000100000000</span><span class="string">)</span></span><br><span class="line">   <span class="string">the</span> <span class="string">space</span> <span class="string">10240K,</span>  <span class="number">50</span><span class="string">%</span> <span class="string">used</span> <span class="string">[0x00000000ff600000,</span> <span class="number">0x00000000ffb00010</span><span class="string">,</span> <span class="number">0x00000000ffb00200</span><span class="string">,</span> <span class="number">0x0000000100000000</span><span class="string">)</span></span><br><span class="line"> <span class="string">Metaspace</span>       <span class="string">used</span> <span class="string">3113K,</span> <span class="string">capacity</span> <span class="string">4496K,</span> <span class="string">committed</span> <span class="string">4864K,</span> <span class="string">reserved</span> <span class="string">1056768K</span></span><br><span class="line">  <span class="string">class</span> <span class="string">space</span>    <span class="string">used</span> <span class="string">338K,</span> <span class="string">capacity</span> <span class="string">388K,</span> <span class="string">committed</span> <span class="string">512K,</span> <span class="string">reserved</span> <span class="string">1048576K</span></span><br><span class="line"><span class="string">```</span> </span><br><span class="line"><span class="string">tenured</span> <span class="string">generation</span> <span class="number">5120</span> <span class="string">就是5m</span> <span class="string">的大小.对象直接创建在了老年代。如果我们直接去掉-XX:UseSerialGC参数。但是保留PretenureSizeThreshold</span> <span class="string">对象还是创建在了Eden区。</span></span><br></pre></td></tr></table></figure>
+<p>Heap<br>
+PSYoungGen      total 9216K, used 7281K [0x00000000ff600000, 0x0000000100000000, 0x0000000100000000)<br>
+eden space 8192K, 88% used [0x00000000ff600000,0x00000000ffd1c5a0,0x00000000ffe00000)<br>
+from space 1024K, 0% used [0x00000000fff00000,0x00000000fff00000,0x0000000100000000)<br>
+to   space 1024K, 0% used [0x00000000ffe00000,0x00000000ffe00000,0x00000000fff00000)<br>
+ParOldGen       total 10240K, used 0K [0x00000000fec00000, 0x00000000ff600000, 0x00000000ff600000)<br>
+object space 10240K, 0% used [0x00000000fec00000,0x00000000fec00000,0x00000000ff600000)<br>
+Metaspace       used 3131K, capacity 4496K, committed 4864K, reserved 1056768K<br>
+class space    used 342K, capacity 388K, committed 512K, reserved 1048576K</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 如果无法在新生代分配(对象的大小大于或者等于堆大小),直接在老年代创建,且不会触发GC</span><br></pre></td></tr></table></figure>
+<p>public class MyGcTest05 {<br>
+public static void main(String[] args) {<br>
+int size  = 1024 * 1024; //1m 大小<br>
+byte[] byteArray1 =new byte[8*size]; // 不会触发Minor GC<br>
+}<br>
+}</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">GC日志如下，对象直接创建在了老年代:</span></span><br></pre></td></tr></table></figure>
+<p>Heap<br>
+PSYoungGen      total 9216K, used 2320K [0x00000000ff600000, 0x0000000100000000, 0x0000000100000000)<br>
+eden space 8192K, 28% used [0x00000000ff600000,0x00000000ff844260,0x00000000ffe00000)<br>
+from space 1024K, 0% used [0x00000000fff00000,0x00000000fff00000,0x0000000100000000)<br>
+to   space 1024K, 0% used [0x00000000ffe00000,0x00000000ffe00000,0x00000000fff00000)<br>
+ParOldGen       total 10240K, used 8192K [0x00000000fec00000, 0x00000000ff600000, 0x00000000ff600000)<br>
+object space 10240K, 80% used [0x00000000fec00000,0x00000000ff400010,0x00000000ff600000)<br>
+Metaspace       used 3042K, capacity 4556K, committed 4864K, reserved 1056768K<br>
+class space    used 323K, capacity 392K, committed 512K, reserved 1048576K</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下面的情况则会触发一次Minor GC</span><br></pre></td></tr></table></figure>
+<pre><code>byte[] byteArray2 =new byte[4*size];
+byte[] byteArray1 =new byte[7*size];
+</code></pre>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">#### 如果老年代满了就会触发Full GC</span><br><span class="line"></span><br><span class="line">我们创建两个8m 的Eden区的大小还是8m 因为无法分配导致直接两个都会分配到老年代，老年代是10m,无法容纳第二个对象就会触发Full GC ，并且会出现OOM。</span><br><span class="line">```java</span><br><span class="line">    byte[] byteArray2 =new byte[8 *size];</span><br><span class="line">    byte[] byteArray3 =new byte[8 *size];</span><br></pre></td></tr></table></figure>
+<p>无法分配导致的Full GC,完了还是无法分配就会抛出OutOfMemory:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[GC (Allocation Failure) [PSYoungGen: 1997K-&gt;776K(9216K)] 10189K-&gt;8976K(19456K), 0.0008958 secs] [Times: <span class="attribute">user</span>=0.00 <span class="attribute">sys</span>=0.00, <span class="attribute">real</span>=0.00 secs] </span><br><span class="line">[GC (Allocation Failure) [PSYoungGen: 776K-&gt;696K(9216K)] 8976K-&gt;8896K(19456K), 0.0008225 secs] [Times: <span class="attribute">user</span>=0.00 <span class="attribute">sys</span>=0.00, <span class="attribute">real</span>=0.00 secs] </span><br><span class="line">[Full GC (Allocation Failure) [PSYoungGen: 696K-&gt;0K(9216K)] [ParOldGen: 8200K-&gt;8798K(10240K)] 8896K-&gt;8798K(19456K), [Metaspace: 3167K-&gt;3167K(1056768K)], 0.0046045 secs] [Times: <span class="attribute">user</span>=0.00 <span class="attribute">sys</span>=0.00, <span class="attribute">real</span>=0.00 secs] </span><br><span class="line">[GC (Allocation Failure) [PSYoungGen: 0K-&gt;0K(9216K)] 8798K-&gt;8798K(19456K), 0.0002650 secs] [Times: <span class="attribute">user</span>=0.00 <span class="attribute">sys</span>=0.00, <span class="attribute">real</span>=0.00 secs] </span><br><span class="line">[Full GC (Allocation Failure) [PSYoungGen: 0K-&gt;0K(9216K)] [ParOldGen: 8798K-&gt;8780K(10240K)] 8798K-&gt;8780K(19456K), [Metaspace: 3167K-&gt;3167K(1056768K)], 0.0051171 secs] [Times: <span class="attribute">user</span>=0.00 <span class="attribute">sys</span>=0.00, <span class="attribute">real</span>=0.01 secs] </span><br><span class="line">Exception <span class="keyword">in</span> thread <span class="string">"main"</span> java.lang.OutOfMemoryError: Java heap space</span><br><span class="line">	at com.sqhtech.gc.MyGcTest06.main(MyGcTest06.java:7)</span><br><span class="line">Heap</span><br><span class="line"> PSYoungGen      total 9216K, used 410K [0x00000000ff600000, 0x0000000100000000, 0x0000000100000000)</span><br><span class="line">  eden space 8192K, 5% used [0x00000000ff600000,0x00000000ff666800,0x00000000ffe00000)</span><br><span class="line">  <span class="keyword">from</span> space 1024K, 0% used [0x00000000ffe00000,0x00000000ffe00000,0x00000000fff00000)</span><br><span class="line">  <span class="keyword">to</span>   space 1024K, 0% used [0x00000000fff00000,0x00000000fff00000,0x0000000100000000)</span><br><span class="line"> ParOldGen       total 10240K, used 8780K [0x00000000fec00000, 0x00000000ff600000, 0x00000000ff600000)</span><br><span class="line">  object space 10240K, 85% used [0x00000000fec00000,0x00000000ff493140,0x00000000ff600000)</span><br><span class="line"> Metaspace       used 3232K, capacity 4496K, committed 4864K, reserved 1056768K</span><br><span class="line">  class space    used 351K, capacity 388K, committed 512K, reserved 1048576K</span><br></pre></td></tr></table></figure>
+<h2><span id="动态的年龄调整以及-maxtenuringthreshold-最大阈值的设置">动态的年龄调整以及 MaxTenuringThreshold 最大阈值的设置</span></h2>
+<p>启动参数</p>
+<p>/**</p>
+<ul>
+<li>经历了多次GC后存活的对象可以在From Survivor To Servivor之间来回复制</li>
+<li>每一复制就是1岁</li>
+<li></li>
+<li>-XX:MaxTenuringThreshold=4 设置晋升到老年代对象的最大的存活年龄。</li>
+<li>这个阈值是可以动态调整的，设置值为最大值</li>
+<li></li>
+<li>JVM可以在年龄等于2的时候就吧新生代的对象晋升到老年代，但是最大值不会超过</li>
+<li>设置的值</li>
+<li>ParallGC 15 CMS 默认为6  G1 默认为15</li>
+<li></li>
+<li>如果发现到了某个年龄后总大小以及大于Survivor空间的50%那么这时候就需要自动的调整</li>
+<li>阈值，不能再继续等到默认的15次GC后才能完成晋升。会导致空间大小不足，导致对象直接从</li>
+<li>Eden区晋升到老年代</li>
+<li></li>
+<li>-XX:+PrintTenuringDistribution 打印GC日志<br>
+*/</li>
+</ul>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-verbose:gc</span></span><br><span class="line"><span class="deletion">-Xmx20m</span></span><br><span class="line"><span class="deletion">-Xms20m</span></span><br><span class="line"><span class="deletion">-Xmn10m</span></span><br><span class="line"><span class="deletion">-XX:+PrintGCDetails</span></span><br><span class="line"><span class="deletion">-XX:SurvivorRatio=8</span></span><br><span class="line"><span class="deletion">-XX:MaxTenuringThreshold=5</span></span><br><span class="line"><span class="deletion">-XX:+PrintTenuringDistribution</span></span><br></pre></td></tr></table></figure>
+<p>java  不停的创建对象,触发GC</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>  size = <span class="number">1024</span> * <span class="number">1024</span> ;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i= <span class="number">0</span>;i&lt;<span class="number">1000</span>;i++)&#123;</span><br><span class="line">       <span class="keyword">try</span> &#123;</span><br><span class="line">           Thread.sleep(<span class="number">50</span>);</span><br><span class="line">           <span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[ <span class="number">1</span> *size];</span><br><span class="line">       &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>GC log</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Desired survivor size 1048576 bytes, new threshold 5 (max 5)</span><br><span class="line">[PSYoungGen: 8097K-&gt;776K(9216K)] 8105K-&gt;784K(19456K), 0.0008843 secs] [Times: <span class="attribute">user</span>=0.00 <span class="attribute">sys</span>=0.00, <span class="attribute">real</span>=0.00 secs] </span><br><span class="line">[GC (Allocation Failure) </span><br><span class="line">Desired survivor size 1048576 bytes, new threshold 4 (max 5)</span><br><span class="line">[PSYoungGen: 8099K-&gt;824K(9216K)] 8107K-&gt;832K(19456K), 0.0008337 secs] [Times: <span class="attribute">user</span>=0.00 <span class="attribute">sys</span>=0.00, <span class="attribute">real</span>=0.00 secs] </span><br><span class="line">[GC (Allocation Failure) </span><br><span class="line">Desired survivor size 1048576 bytes, new threshold 3 (max 5)</span><br><span class="line">[PSYoungGen: 8149K-&gt;0K(9216K)] 8157K-&gt;688K(19456K), 0.0009346 secs] [Times: <span class="attribute">user</span>=0.00 <span class="attribute">sys</span>=0.00, <span class="attribute">real</span>=0.00 secs] </span><br><span class="line">[GC (Allocation Failure) </span><br><span class="line">Desired survivor size 1048576 bytes, new threshold 2 (max 5)</span><br><span class="line">[PSYoungGen: 7326K-&gt;0K(9216K)] 8014K-&gt;688K(19456K), 0.0003190 secs] [Times: <span class="attribute">user</span>=0.00 <span class="attribute">sys</span>=0.00, <span class="attribute">real</span>=0.00 secs] </span><br><span class="line">[GC (Allocation Failure) </span><br><span class="line">Desired survivor size 1048576 bytes, new threshold 1 (max 5)</span><br><span class="line">[PSYoungGen: 7327K-&gt;0K(9216K)] 8015K-&gt;688K(19456K), 0.0004307 secs] [Times: <span class="attribute">user</span>=0.00 <span class="attribute">sys</span>=0.00, <span class="attribute">real</span>=0.00 secs]</span><br></pre></td></tr></table></figure>
+<p>Desired survivor size 1048576 bytes, new threshold 1 (max 5)</p>
+<p>new threshold num 这里的数值就是实际晋升到老年代的年龄的大小 ，这里的max如果内存分配不频繁的时候GC 还将可能变为最大值。</p>
+<p>美团技术博客 : <a href="https://tech.meituan.com/2017/12/29/jvm-optimize.html" target="_blank" rel="noopener">从实际案例聊聊Java应用的GC优化</a></p>
+
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2017/03/18/hexo-theme-beantech/" data-toggle="tooltip" data-placement="top" title="[Hexo] Theme BeanTech">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">触发GC的条件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">第一个例子</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.0.1.</span> <span class="toc-nav-text">GC 日志</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.0.2.</span> <span class="toc-nav-text">新生代</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.0.3.</span> <span class="toc-nav-text">当新生代已经无法容纳下一个新创建的对象,新创建的对象将直接在老年代创建</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">System.gc();</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">元空间导致的Full GC</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">JDK1.8 默认的垃圾回收算法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">JVM设置阈值 PretenureSizeThreshold</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">动态的年龄调整以及 MaxTenuringThreshold 最大阈值的设置</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://beantech.org" target="_blank">Bean Tech</a></li>
+                    
+                        <li><a href="http://blog.kaijun.rocks" target="_blank">Kaijun&#39;s Blog</a></li>
+                    
+                        <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="#" target="_blank">It Helps SEO</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "your-disqus-ID";
+    var disqus_identifier = "http://yoursite-url/2020/01/16/GC1/";
+    var disqus_url = "http://yoursite-url/2020/01/16/GC1/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus embedded js code start end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/YenYuHsuan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/YenYuHsuan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/yu-hsuan-yen">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; John Doe 2020 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite-url/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="http://yoursite-url/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
